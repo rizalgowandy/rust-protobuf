@@ -1,6 +1,31 @@
 # Changelog
 
-## [3.4] - Unreleased
+## Unreleased
+
+## [3.7.1] - Unrelease
+
+- `protoc-gen-rust` renamed to `protoc-gen-rs`. `protoc --rust_out=` no longer works with latest Google protobuf,
+  they are working on official protobuf support for Rust.
+- Do not detect nightly in `protobuf` crate (no longer needed)
+- [Repeated fields in constants](https://github.com/stepancheg/rust-protobuf/pull/740)
+
+## [3.6.0] - 2024-09-30
+
+- [Fix text format parsing of non-ASCII](https://github.com/stepancheg/rust-protobuf/pull/730)
+
+## [3.5.1] - 2024-08-19
+
+- [Remove deprecated `box_pointers` lint](https://github.com/stepancheg/rust-protobuf/pull/733)
+
+## [3.5.0] - 2024-06-26
+
+- [Default to packed for repeated primitives in proto3](https://github.com/stepancheg/rust-protobuf/pull/707)
+- [Put correct flag in comment of generated files](https://github.com/stepancheg/rust-protobuf/pull/655)
+- [Option to disable non-exhausive annotation for oneof](https://github.com/stepancheg/rust-protobuf/pull/726)
+- [Option to generate `BTreeMap` for map fields](https://github.com/stepancheg/rust-protobuf/pull/700)
+- [Fix writing large messages](https://github.com/stepancheg/rust-protobuf/pull/725)
+
+## [3.4] - 2024-02-24
 
 * [Unnecessary copy in print_to_string_internal](https://github.com/stepancheg/rust-protobuf/pull/684)
 * [Ignore error of `flush` in `Drop` of `CodedOutputStream`](https://github.com/stepancheg/rust-protobuf/issues/714)
